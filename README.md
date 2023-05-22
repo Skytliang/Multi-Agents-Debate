@@ -107,12 +107,12 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 Given the Chinese sentence "吃掉敌人一个师。", please provide its translation in English.
 
 ###### MAD
-* <img src="imgs/angel.png" width="30" />: I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eat up an enemy division.” The word "吃掉" literally means "eat up" or “consume."
-* <img src="imgs/devil.png" width="30" />: I disagree with your translation. I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eliminate an enemy division.” While "吃掉" can be translated as "eat up" or "consume," it can also mean "eliminate" or "annihilate" in a military context. In this case, it is more appropriate to use "eliminate" as it conveys the idea of completely destroying the enemy division.
+* <img src="imgs/angel.png" width="30" />: I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eat up an enemy division.” **The word "吃掉" literally means "eat up" or “consume."**
+* <img src="imgs/devil.png" width="30" />: I disagree with your translation. I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eliminate an enemy division.” While "吃掉" can be translated as "eat up" or "consume," **it can also mean "eliminate" or "annihilate" in a military context.** In this case, it is more appropriate to use "eliminate" as it conveys the idea of completely destroying the enemy division.
 * <img src="imgs/judge.png" width="30" />: Both sides presented valid arguments and translations that accurately convey the meaning of the original Chinese text. The choice between 'eat up' and 'eliminate' may depend on the context and tone of the text. Therefore, there is no clear preference for either side at this time.
 * <img src="imgs/angel.png" width="30" />: While "eliminate" does convey the idea of completely destroying the enemy division, it doesn't capture the connotation of consuming or devouring the enemy that is implied by “吃掉."
-* <img src="imgs/devil.png" width="30" />: In a military context, "吃掉" is often used to describe the complete destruction of the enemy, rather than the consumption of their resources or territory.
-* <img src="imgs/judge.png" width="30" />: Both sides presented valid arguments, but the negative side's argument that 'eliminate' better captures the intensity and seriousness of the military language used in the original Chinese text was more convincing. Additionally, 'eliminate' accurately conveys the idea of completely destroying the enemy division. Therefore, the correct English translation of the Chinese text '吃掉敌人一个师' is 'Eliminate an enemy division.'
+* <img src="imgs/devil.png" width="30" />: **In a military context, "吃掉" is often used to describe the complete destruction of the enemy, rather than the consumption of their resources or territory.**
+* <img src="imgs/judge.png" width="30" />: Both sides presented valid arguments, but the negative side's argument that 'eliminate' better captures the intensity and seriousness of the military language used in the original Chinese text was more convincing. Additionally, 'eliminate' accurately conveys the idea of completely destroying the enemy division. Therefore, the correct English translation of the Chinese text '吃掉敌人一个师' is **'Eliminate an enemy division.'**
 
 <p align="center">
 <img src="imgs/translation-case1.png" width="450" />
