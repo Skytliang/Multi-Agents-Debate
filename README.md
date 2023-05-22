@@ -6,7 +6,7 @@
 > "真理越辩越明。"
 >
 
-<!-- Good Luck! --->
+<!-- "Good Luck!" -- wxjiao --->
 
 ### Brief Introduction
 
@@ -104,7 +104,7 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 
 
 ##### Case 1
-Given the Chinese sentences "吃掉敌人一个师。", please provide its translation in English.
+Given the Chinese sentence "吃掉敌人一个师。", please provide its translation in English.
 
 ###### MAD
 * <img src="imgs/angel.png" width="30" />: I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eat up an enemy division.” The word "吃掉" literally means "eat up" or “consume."
@@ -121,7 +121,7 @@ Given the Chinese sentences "吃掉敌人一个师。", please provide its trans
 
 <details>
 <summary><b>Case 2</b></summary>
-Given the Chinese sentences "他从后门搞到了不少名酒。", please provide its translation in English.
+Given the Chinese sentence "他从后门搞到了不少名酒。", please provide its translation in English.
     
 ###### MAD
 
