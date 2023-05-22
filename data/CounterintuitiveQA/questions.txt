@@ -1,0 +1,10 @@
+When Alice walks up the hill, her speed is 1 m/s and when she goes down the hill, her speed is 3 m/s. Then when Alice walks up and down the hill, what is her average speed?
+9 days among 10 days, Alice goes out for drink. She only goes to three bars for drink with equal frequency. Bob is trying to find Alice today. However, he fails after going to two bars. What is the probability that Alice shows up in the third bar.
+One peach costs one cent. You can use 3 peach pits to exchange for one peach. If you have 10 cents, then what is the maximal number of peaches you can eat?
+You finish drinking 20% of a cup of milk. You then fill up water, drink 40% of it and fill up water again. What is the percentage of milk in this cup now?
+We put 10 g sat into 100 g water. What is the percentage of salt now?
+We have 1 ton apples which contain 90% water. After a few days, those apples only have 80% water. What is the weight of those apples now?
+At most how many distinct natural numbers sum to 100?
+20 people get full marks for math. 20 people get full marks for history. 20 people get full marks for physics. 7 people get full marks for both math and physics. 9 for both history and physics. 3 do not get full marks for any of the subjects. How many people here at most?
+If five machines produce 5 items in 5 minutes, then how long do 100 machines need to produce 100 items?
+85% taxi in this city is green, the others are blue. A witness sees a blue taxi. She is usually correct with probability 80%. What is the probability that the taxi saw by the witness is blue?
