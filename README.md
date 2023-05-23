@@ -68,9 +68,11 @@ When Alice walks up the hill, her speed is 1 m/s and when she goes down the hill
 
 <details>
 <summary><b>Debate process</b></summary>
+
 * <img src="imgs/angel.png" width="30" />:Alice's average speed can be calculated by adding her speed going up the hill and her speed going down the hill, and then dividing by 2. **So, (1 m/s + 3 m/s) / 2 = 2 m/s.** Therefore, Alice's average speed is 2 m/s.
 * <img src="imgs/devil.png" width="30" />: I disagree with your answer. The problem doesn't give us any information about the distance Alice covers while going up and down the hill. **So, we cannot simply add her speeds and divide by 2 to get her average speed.** We need to know the distance she covers to calculate her average speed.
 * <img src="imgs/angel.png" width="30" />: That's a good point. But we can assume that Alice covers the same distance going up and down the hill. In that case, we can use the formula for average speed, which is total distance divided by total time. **If Alice covers a distance of d going up and down the hill, then her total distance is 2d. Her time going up the hill is d/1 = d, and her time going down the hill is d/3. So, her total time is d + d/3 = 4d/3. Therefore, her average speed is 2d/(4d/3) = 3/2 m/s.**
+
 </details>
 
 <details>
