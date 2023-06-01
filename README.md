@@ -6,11 +6,6 @@
 > "真理越辩越明。"
 >
 
-<div align="center">
-    <img width="45%" alt="MAD" src="imgs/image.png" />
-    <p class="image-caption">Figure 1: Comparison between debate and reflection.</p>
-</div>
-
 <!-- "Good Luck!" -- wxjiao --->
 <!-- "Good Luck!" -- zwhe99 --->
 <!-- "Good Luck!" -- xing --->
@@ -24,8 +19,8 @@ However, we point out that self-reflection can easily fall into the **degenerati
 - **Limited External Feedback**: Self-reflection is primarily an internal process, but external feedback can provide valuable perspectives and insights. Without seeking or considering external feedback, an individual may :pensive:_miss important blind spots or alternative viewpoints that can enrich their self-reflection_.
 
 <div align="center">
-    <img width="90%" alt="MAD" src="imgs/framework.png" />
-    <p class="image-caption">Figure 2: Framework of Multi-Agent Debate. Here we designate the devil (<img src="imgs/devil.png" width="25" />) as the affirmative side while the angel (<img src="imgs/angel.png" width="25" />) as the negative side. We want the angel to correct the devil’s mistakes..</p>
+    <img width="45%" alt="MAD" src="imgs/image.png" />
+    <p class="image-caption">Figure 1: Comparison between debate and reflection.</p>
 </div>
 
 In this project, we have embarked on a journey to explore the potential of a debating interaction framework among LLMs. 
@@ -35,6 +30,11 @@ Obviously, **MAD** is less likely to have the **DoT** issue and can exploit more
 
 JOIN US on this journey of exploring the interaction and debating capability with LLMs. :rocket::rocket::rocket:
 
+### Framework
+<div align="center">
+    <img width="90%" alt="MAD" src="imgs/framework.png" />
+    <p class="image-caption">Figure 2: Framework of Multi-Agent Debate. Here we designate the devil (<img src="imgs/devil.png" width="25" />) as the affirmative side while the angel (<img src="imgs/angel.png" width="25" />) as the negative side. We want the angel to correct the devil’s mistakes..</p>
+</div>
 
 ## Run
 
@@ -53,7 +53,7 @@ sh debate4tran.sh
 ```
 
 
----
+## Main Results
 
 ### Counterintuitive QA
 
@@ -118,7 +118,6 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 * <img src="imgs/devil.png" width="30" />: The negative side correctly calculated the new weight of the apples by considering the solid content as a constant and using the formula to find the new weight based on the reduced water content percentage.
 
 </details>
-
 
 ---
 
