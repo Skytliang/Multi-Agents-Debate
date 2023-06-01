@@ -36,20 +36,29 @@ JOIN US on this journey of exploring the interaction and debating capability wit
     <p class="image-caption">Figure 2: Framework of Multi-Agent Debate. Here we designate the devil (<img src="imgs/devil.png" width="25" />) as the affirmative side while the angel (<img src="imgs/angel.png" width="25" />) as the negative side. We want the angel to correct the devil’s mistakes..</p>
 </div>
 
+
 ## Run
 
 **Preparation**
 
-  ```
+  ```shell
   pip3 install -r requirements.txt
   ```
 * Set your openai API_KEY in `debate4tran.sh`
-
+* Set your openai API_KEY in `interactive.py`
 
 **Run MAD**
 
-```
+```shell
 sh debate4tran.sh 
+```
+
+**Run Interactive**
+
+If you just want to have a try, you can try the interactive script on your PC.
+
+```shell
+python3 interactive.py
 ```
 
 
