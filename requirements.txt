@@ -1,0 +1,6 @@
+openai
+tiktoken
+tqdm
+langcodes
+backoff
+language_data

@@ -35,14 +35,16 @@ JOIN US on this journey of exploring the interaction and debating capability wit
 
 **Preparation**
 
-* `pip install -r code/requirements.txt`
-* Set your openai API_KEY in `code/response-turbo.sh`
+  ```
+  pip install -r requirements.txt
+  ```
+* Set your openai API_KEY in `debate4tran.sh`
 
 
 **Run MAD**
 
 ```
-sh code/response-turbo.sh 
+sh debate4tran.sh 
 ```
 
 
