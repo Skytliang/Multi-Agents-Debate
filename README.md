@@ -58,7 +58,7 @@ sh debate4tran.sh
 ### Counterintuitive QA
 
 <div align="center">
-    <img width="40%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
+    <img width="35%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
     <p class="image-caption">Table 1: Reasoning accuracy on Counter-Intuitive AR.</p>
 </div>
 
@@ -176,13 +176,13 @@ Given the Chinese sentence "他从后门搞到了不少名酒。", please provid
 
 ## Citation
 ```
-@misc{liang2023mad,
-author = {Tian Liang, Zhiwei He, Wenxiang Jiao, Yan Wang, Rui Wang, Yujiu Yang, Xing Wang, Zhaopeng Tu, Shuming Shi}, 
-title = {Exploring Multi-Agents Debate with Large Language Models}, 
-year = {2023}, 
-publisher = {GitHub},
-journal = {GitHub repository}, 
-howpublished = {https://github.com/Skytliang/Multi-Agents-Debate}, 
+@misc{liang2023encouraging,
+      title={Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate}, 
+      author={Tian Liang and Zhiwei He and Wenxiang Jiao and Xing Wang and Yan Wang and Rui Wang and Yujiu Yang and Zhaopeng Tu and Shuming Shi},
+      year={2023},
+      eprint={2305.19118},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
 
