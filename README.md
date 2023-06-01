@@ -36,7 +36,7 @@ JOIN US on this journey of exploring the interaction and debating capability wit
 **Preparation**
 
   ```
-  pip install -r requirements.txt
+  pip3 install -r requirements.txt
   ```
 * Set your openai API_KEY in `debate4tran.sh`
 
