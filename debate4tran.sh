@@ -1,7 +1,8 @@
 set -e
 set -u
 
-MAD_PATH=$(realpath `dirname $0`)
+# MAD_PATH=$(realpath `dirname $0`)
+MAD_PATH=/Your-Workspace/Multi-Agents-Debate
 
 python $MAD_PATH/code/debate4tran.py \
     -i $MAD_PATH/data/CommonMT/input.example.txt \
