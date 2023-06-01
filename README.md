@@ -58,7 +58,7 @@ sh debate4tran.sh
 ### Counterintuitive QA
 
 <div align="center">
-    <img width="50%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
+    <img width="40%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
     <p class="image-caption">Table 1: Reasoning accuracy on Counter-Intuitive AR.</p>
 </div>
 
@@ -134,11 +134,11 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 Given the Chinese sentence "吃掉敌人一个师。", please provide its translation in English.
 
 ###### MAD
-* <img src="imgs/angel.png" width="30" />: I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eat up an enemy division.” **The word "吃掉" literally means "eat up" or “consume."**
-* <img src="imgs/devil.png" width="30" />: I disagree with your translation. I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eliminate an enemy division.” While "吃掉" can be translated as "eat up" or "consume," **it can also mean "eliminate" or "annihilate" in a military context.** In this case, it is more appropriate to use "eliminate" as it conveys the idea of completely destroying the enemy division.
+* <img src="imgs/devil.png" width="30" />: I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eat up an enemy division.” **The word "吃掉" literally means "eat up" or “consume."**
+* <img src="imgs/angel.png" width="30" />: I disagree with your translation. I believe the correct translation of the Chinese text "吃掉敌人一个师" is "Eliminate an enemy division.” While "吃掉" can be translated as "eat up" or "consume," **it can also mean "eliminate" or "annihilate" in a military context.** In this case, it is more appropriate to use "eliminate" as it conveys the idea of completely destroying the enemy division.
 * <img src="imgs/judge.png" width="30" />: Both sides presented valid arguments and translations that accurately convey the meaning of the original Chinese text. The choice between 'eat up' and 'eliminate' may depend on the context and tone of the text. Therefore, there is no clear preference for either side at this time.
-* <img src="imgs/angel.png" width="30" />: While "eliminate" does convey the idea of completely destroying the enemy division, it doesn't capture the connotation of consuming or devouring the enemy that is implied by “吃掉."
-* <img src="imgs/devil.png" width="30" />: **In a military context, "吃掉" is often used to describe the complete destruction of the enemy, rather than the consumption of their resources or territory.**
+* <img src="imgs/devil.png" width="30" />: While "eliminate" does convey the idea of completely destroying the enemy division, it doesn't capture the connotation of consuming or devouring the enemy that is implied by “吃掉."
+* <img src="imgs/angel.png" width="30" />: **In a military context, "吃掉" is often used to describe the complete destruction of the enemy, rather than the consumption of their resources or territory.**
 * <img src="imgs/judge.png" width="30" />: Both sides presented valid arguments, but the negative side's argument that 'eliminate' better captures the intensity and seriousness of the military language used in the original Chinese text was more convincing. Additionally, 'eliminate' accurately conveys the idea of completely destroying the enemy division. Therefore, the correct English translation of the Chinese text '吃掉敌人一个师' is **'Eliminate an enemy division.'**
 
 <p align="center">
@@ -152,11 +152,11 @@ Given the Chinese sentence "他从后门搞到了不少名酒。", please provid
     
 ###### MAD
 
-* <img src="imgs/angel.png" width="30" />: The phrase “从后门” **literally translates to “from the back door.”**
-* <img src="imgs/devil.png" width="30" />: I actually disagree with your translation. I believe a more accurate translation would be "He got a lot of famous liquor from the back door. Lastly, while "从后门" does literally translate to "from the back door," **it is a common Chinese idiom that means obtaining something through unofficial or illegitimate means**. Therefore, the use of "from the back door" in the translation is not entirely accurate. Instead, the use of "from an unofficial source" or "through unofficial means" would be more appropriate.
+* <img src="imgs/devil.png" width="30" />: The phrase “从后门” **literally translates to “from the back door.”**
+* <img src="imgs/angel.png" width="30" />: I actually disagree with your translation. I believe a more accurate translation would be "He got a lot of famous liquor from the back door. Lastly, while "从后门" does literally translate to "from the back door," **it is a common Chinese idiom that means obtaining something through unofficial or illegitimate means**. Therefore, the use of "from the back door" in the translation is not entirely accurate. Instead, the use of "from an unofficial source" or "through unofficial means" would be more appropriate.
 * <img src="imgs/judge.png" width="30" />: Both sides presented valid arguments and translations that accurately capture the meaning of the original Chinese text. The choice between wine and liquor is a matter of interpretation and context. **The use of from the back door versus from an unofficial source is a matter of preference and style.** Therefore, there is no clear preference for a translation candidate.
-* <img src="imgs/angel.png" width="30" />: **I agree that "从后门" is a common Chinese idiom that means obtaining something through unofficial or illegitimate means.** The use of "from an unofficial source" or "through unofficial means" can be more appropriate than "from the back door.”
-* <img src="imgs/devil.png" width="30" />: Yes, I agree with your perspective. 
+* <img src="imgs/devil.png" width="30" />: **I agree that "从后门" is a common Chinese idiom that means obtaining something through unofficial or illegitimate means.** The use of "from an unofficial source" or "through unofficial means" can be more appropriate than "from the back door.”
+* <img src="imgs/angel.png" width="30" />: Yes, I agree with your perspective. 
 * <img src="imgs/judge.png" width="30" />: While both translations accurately capture the meaning of the original Chinese text, the use of 'liquor' in candidate 2 is more accurate as '名酒' is more commonly used to refer to liquor. Additionally, the use of 'from an unofficial source' in candidate 3 more accurately conveys the connotation of '从后门' as obtaining something through unofficial or illegitimate means. Therefore, the correct translation is: **'He got a lot of famous liquor from an unofficial source.'**
 
 <p align="center">
