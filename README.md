@@ -59,7 +59,7 @@ sh debate4tran.sh
 
 <div align="center">
     <img width="50%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
-    <p class="image-caption">Table 1: Results on 10 Counterintuitive QA Examples.</p>
+    <p class="image-caption">Table 1: Reasoning accuracy on Counter-Intuitive AR.</p>
 </div>
 
 
@@ -76,12 +76,12 @@ When Alice walks up the hill, her speed is 1 m/s and when she goes down the hill
 <details>
 <summary><b>Debate process</b></summary>
 
-* <img src="imgs/angel.png" width="30" />:Alice's average speed can be calculated by adding her speed going up the hill and her speed going down the hill, and then dividing by 2. **So, (1 m/s + 3 m/s) / 2 = 2 m/s.** Therefore, Alice's average speed is 2 m/s.
-* <img src="imgs/devil.png" width="30" />: I disagree with your answer. The problem doesn't give us any information about the distance Alice covers while going up and down the hill. **So, we cannot simply add her speeds and divide by 2 to get her average speed.** We need to know the distance she covers to calculate her average speed.
+* <img src="imgs/devil.png" width="30" />:Alice's average speed can be calculated by adding her speed going up the hill and her speed going down the hill, and then dividing by 2. **So, (1 m/s + 3 m/s) / 2 = 2 m/s.** Therefore, Alice's average speed is 2 m/s.
+* <img src="imgs/angel.png" width="30" />: I disagree with your answer. The problem doesn't give us any information about the distance Alice covers while going up and down the hill. **So, we cannot simply add her speeds and divide by 2 to get her average speed.** We need to know the distance she covers to calculate her average speed.
 * <img src="imgs/judge.png" width="30" />: **The average speed is calculated by dividing the total distance by the total time taken.** As Alice walks up and down the hill, the distance covered in both directions is the same. Therefore, the total distance covered is 2 times the distance of either direction.
-* <img src="imgs/angel.png" width="30" />: That's a good point. But we can assume that Alice covers the same distance going up and down the hill. In that case, we can use the formula for average speed, which is total distance divided by total time. **If Alice covers a distance of d going up and down the hill, then her total distance is 2d. Her time going up the hill is d/1 = d, and her time going down the hill is d/3. So, her total time is d + d/3 = 4d/3. Therefore, her average speed is 2d/(4d/3) = 3/2 m/s.**
-* <img src="imgs/devil.png" width="30" />: Thank you for providing your answer. This average speed of 1.5 m/s takes into account both the uphill and downhill speeds, providing a balanced representation of Alice's overall performance while walking up and down the hill.
-* <img src="imgs/judge.png" width="30" />: Yes. Let's assume the distance is d. The time taken to walk up the hill is d/1 and the time taken to walk down the hill is d/3. The total time taken is d/1 + d/3 = 4d/3. Therefore, the average speed is (2d)/(4d/3) = 1.5 m/s. Hence, the negative side is correct.
+* <img src="imgs/devil.png" width="30" />: That's a good point. But we can assume that Alice covers the same distance going up and down the hill. In that case, we can use the formula for average speed, which is total distance divided by total time. **If Alice covers a distance of d going up and down the hill, then her total distance is 2d. Her time going up the hill is d/1 = d, and her time going down the hill is d/3. So, her total time is d + d/3 = 4d/3. Therefore, her average speed is 2d/(4d/3) = 3/2 m/s.**
+* <img src="imgs/angel.png" width="30" />: Thank you for providing your answer. This average speed of 1.5 m/s takes into account both the uphill and downhill speeds, providing a balanced representation of Alice's overall performance while walking up and down the hill.
+* <img src="imgs/judge.png" width="30" />: Yes. Let's assume the distance is d. The time taken to walk up the hill is d/1 and the time taken to walk down the hill is d/3. The total time taken is d/1 + d/3 = 4d/3. **Therefore, the average speed is (2d)/(4d/3) = 1.5 m/s. Hence, the negative side is correct.**
 
 </details>
 
@@ -90,7 +90,7 @@ When Alice walks up the hill, her speed is 1 m/s and when she goes down the hill
 We have 1 ton apples which contain 90% water. After a few days, those apples only have 80% water. What is the weight of those apples now? (0.5ton)
 
 ###### MAD
-* <img src="imgs/angel.png" width="30" />: First, we need to find out how much of the original weight was water. If we have 1 ton of apples with 90% water, then the weight of water in those apples is 0.9 x 1 ton = 0.9 tons.<br>
+* <img src="imgs/devil.png" width="30" />: First, we need to find out how much of the original weight was water. If we have 1 ton of apples with 90% water, then the weight of water in those apples is 0.9 x 1 ton = 0.9 tons.<br>
   Next, we need to find out how much of the new weight is water. If the apples now have 80% water, then the weight of water in those apples is 0.8 x new weight.
 
   We can set up an equation:<br>
@@ -100,9 +100,11 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
   new weight = 1.125 tons<br>
   Therefore, the weight of the apples now is 1.125 tons.
 
-* <img src="imgs/devil.png" width="30" />: **It's important to note that the weight of the apples has decreased due to the loss of water, but the weight of the remaining *solids* remains the same.** This is why we need to calculate the weight of remaining solids in both scenarios to find the new weight of the apples.<br>
+* <img src="imgs/angel.png" width="30" />: **It's important to note that the weight of the apples has decreased due to the loss of water, but the weight of the remaining *solids* remains the same.** This is why we need to calculate the weight of remaining solids in both scenarios to find the new weight of the apples.<br>
 
-* <img src="imgs/angel.png" width="30" />: You are correct. The weight of the apples has decreased due to the loss of water, but the weight of the remaining solids remains the same. Therefore, we need to calculate the weight of the remaining solids in both scenarios to find the new weight of the apples.
+* <img src="imgs/judge.png" width="30" />: Great idea! While it is true that the water content of the apples decreases from 90\% to 80\%, the solid, non-water content of the apples does not change.<br>
+
+* <img src="imgs/devil.png" width="30" />: You are correct. The weight of the apples has decreased due to the loss of water, but the weight of the remaining solids remains the same. Therefore, we need to calculate the weight of the remaining solids in both scenarios to find the new weight of the apples.
 
   We can set up an equation:<br>
   **0.2 x new weight = 0.1 tons**<br>
@@ -110,6 +112,10 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
   new weight = 0.1 tons / 0.2<br>
   new weight = 0.5 tons<br>
   Therefore, the weight of the apples now is 0.5 tons.
+
+* <img src="imgs/angel.png" width="30" />: Thank you for your perspective. While it's true that the weight of the apples themselves hasn't changed, the overall weight of the apples with the water included has decreased. So, the weight of the apples now is 0.5 tons.
+
+* <img src="imgs/devil.png" width="30" />: The negative side correctly calculated the new weight of the apples by considering the solid content as a constant and using the formula to find the new weight based on the reduced water content percentage.
 
 </details>
 
@@ -120,7 +126,7 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 
 <div align="center">
     <img width="50%" alt="CommonMT" src="imgs/CommonMT.png" />
-    <p class="image-caption">Table 2: Results on Commonsense MT.</p>
+    <p class="image-caption">Table 2: Translation performance on Common MT.</p>
 </div>
 
 
