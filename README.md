@@ -114,7 +114,7 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 ### Commonsense Machine Translation
 
 <div align="center">
-    <img width="75%" alt="CommonMT" src="imgs/CommonMT.png" />
+    <img width="60%" alt="CommonMT" src="imgs/CommonMT.png" />
     <p class="image-caption">Table 2: Results on Commonsense MT.</p>
 </div>
 
