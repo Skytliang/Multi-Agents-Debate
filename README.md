@@ -70,7 +70,7 @@ When Alice walks up the hill, her speed is 1 m/s and when she goes down the hill
 
 <div align="center">
     <img width="40%" alt="MAD" src="https://github.com/Skytliang/Multi-Agents-Debate/blob/main/imgs/mad_qa_case1.gif" />
-    <p class="image-caption">Figure 2: An Animation to Show the Process of MAD.</p>
+    <p class="image-caption">Figure 3: An Animation to Show the Process of MAD.</p>
 </div>
 
 <details>
