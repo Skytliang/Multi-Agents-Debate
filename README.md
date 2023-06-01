@@ -6,6 +6,11 @@
 > "真理越辩越明。"
 >
 
+<div align="center">
+    <img width="45%" alt="MAD" src="imgs/image.png" />
+    <p class="image-caption">Figure 1: Comparison between debate and reflection.</p>
+</div>
+
 <!-- "Good Luck!" -- wxjiao --->
 <!-- "Good Luck!" -- zwhe99 --->
 <!-- "Good Luck!" -- xing --->
@@ -19,8 +24,8 @@ However, we point out that self-reflection can easily fall into the **degenerati
 - **Limited External Feedback**: Self-reflection is primarily an internal process, but external feedback can provide valuable perspectives and insights. Without seeking or considering external feedback, an individual may :pensive:_miss important blind spots or alternative viewpoints that can enrich their self-reflection_.
 
 <div align="center">
-    <img width="45%" alt="MAD" src="imgs/image.png" />
-    <p class="image-caption">Figure 1: Comparison between debate and reflection.</p>
+    <img width="90%" alt="MAD" src="imgs/framework.png" />
+    <p class="image-caption">Figure 2: Framework of Multi-Agent Debate. Here we designate the devil (<img src="imgs/devil.png" width="25" />) as the affirmative side while the angel (<img src="imgs/angel.png" width="25" />) as the negative side. We want the angel to correct the devil’s mistakes..</p>
 </div>
 
 In this project, we have embarked on a journey to explore the potential of a debating interaction framework among LLMs. 
@@ -53,7 +58,7 @@ sh debate4tran.sh
 ### Counterintuitive QA
 
 <div align="center">
-    <img width="60%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
+    <img width="50%" alt="CounterintuitiveQA" src="imgs/CounterintuitiveQA.png" />
     <p class="image-caption">Table 1: Results on 10 Counterintuitive QA Examples.</p>
 </div>
 
@@ -114,7 +119,7 @@ We have 1 ton apples which contain 90% water. After a few days, those apples onl
 ### Commonsense Machine Translation
 
 <div align="center">
-    <img width="60%" alt="CommonMT" src="imgs/CommonMT.png" />
+    <img width="50%" alt="CommonMT" src="imgs/CommonMT.png" />
     <p class="image-caption">Table 2: Results on Commonsense MT.</p>
 </div>
 
