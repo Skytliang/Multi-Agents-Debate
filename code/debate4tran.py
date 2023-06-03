@@ -193,7 +193,7 @@ class Debate:
 
         for round in range(self.max_round - 1):
 
-            if self.mod_ans["Whether there is a preference"] == 'Yes' and self.mod_ans["debate_translation"] != '':
+            if self.mod_ans["debate_translation"] != '':
                 break
             else:
                 print(f"===== Debate Round-{round+2} =====\n")
@@ -210,7 +210,7 @@ class Debate:
                 self.moderator.add_memory(self.mod_ans)
                 self.mod_ans = eval(self.mod_ans)
 
-        if self.mod_ans["Whether there is a preference"] == 'Yes' and self.mod_ans["debate_translation"] != '':
+        if self.mod_ans["debate_translation"] != '':
             self.save_file.update(self.mod_ans)
             self.save_file['success'] = True
 
