@@ -184,13 +184,11 @@ Given the Chinese sentence "他从后门搞到了不少名酒。", please provid
 
 ## Citation
 ```
-@misc{liang2023encouraging,
-  title={Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate}, 
-  author={Tian Liang and Zhiwei He and Wenxiang Jiao and Xing Wang and Yan Wang and Rui Wang and Yujiu Yang and Zhaopeng Tu and Shuming Shi},
-  year={2023},
-  eprint={2305.19118},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
+@article{liang2023encouraging,
+  title={Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate},
+  author={Liang, Tian and He, Zhiwei and Jiao, Wenxiang and Wang, Xing and Wang, Yan and Wang, Rui and Yang, Yujiu and Tu, Zhaopeng and Shi, Shuming},
+  journal={arXiv preprint arXiv:2305.19118},
+  year={2023}
 }
 ```
 
