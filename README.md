@@ -62,7 +62,7 @@ If you just want to have a try, you can try the interactive script on your PC.
 python3 interactive.py
 ```
 
-Or simply try our demo for translation [here](https://1b5ba6d00dfa522888.gradio.live/).
+Or simply try our demo for translation [here](https://3935a2cf234f88d899.gradio.live/).
 
 
 ## Main Results
