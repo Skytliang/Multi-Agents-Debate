@@ -1,6 +1,10 @@
-# Multi-Agents Debate with Large Language Models
-:fire:This work aims to explore the debating capability of LLMs by proposing the **MAD** framework, which stands for **M**ulti-**A**gents **D**ebate.
+<div align="center">
+  <img src="imgs/logo2.png" alt="Logo" width="200">
+</div>
 
+<h2 align="center">⚖️ MAD: Multi-Agent Debate</h2>
+
+:fire:This work aims to explore the debating capability of LLMs by proposing the **MAD** framework, which stands for **M**ulti-**A**gents **D**ebate.
 
 >
 > "Truth emerges from the clash of adverse ideas."<br>
@@ -62,7 +66,7 @@ If you just want to have a try, you can try the interactive script on your PC.
 python3 interactive.py
 ```
 
-Or simply try our demo for translation [here](https://3935a2cf234f88d899.gradio.live/).
+Or simply try our demo for translation [here](https://27e21862d6088464de.gradio.live/).
 
 
 ## Main Results
