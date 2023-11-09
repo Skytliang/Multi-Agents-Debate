@@ -1,0 +1,352 @@
+[
+    {
+        "question": "When Alice walks up the hill, her speed is 1 m/s and when she goes down the hill, her speed is 3 m/s. Then when Alice walks up and down the hill, what is her average speed?",
+        "answer": ["1.5", "3/2"],
+        "explanation": "If Alice covers a distance of d going up and down the hill, then her total distance is 2d. Her time going up the hill is d/1 = d, and her time going down the hill is d/3. So, her total time is d + d/3 = 4d/3. Therefore, her average speed is 2d/(4d/3) = 3/2 m/s.",
+        "incorrect answer": ["2"],
+        "incorrect explanation": "Alice's average speed can be calculated by adding her speed going up the hill and her speed going down the hill, and then dividing by 2. So, (1 m/s + 3 m/s) / 2 = 2 m/s. Therefore, Alice's average speed is 2 m/s."
+    },
+    {
+        "question": "9 days among 10 days, Alice goes out for drink. She only goes to three bars for drink with equal frequency. Bob is trying to find Alice today. However, he fails after going to two bars. What is the probability that Alice shows up in the third bar?",
+        "answer": ["0.75", "75%", "3/4"],
+        "explanation": "The first thing to realize is that Alice might not be out at all today, which happens 1 in 10 days. If she does go out (9/10 probability), she chooses each bar with 1/3 probability. Bob has already checked two bars, so if she is out, she must be at the third bar. So, the probability that Alice is at the third bar given that Bob didn't find her at the first two is (9/10 * 1/3) / ((9/10 * 1/3) + (1/10 * 1)) = 3/4.",
+        "incorrect answer": ["0.9", "90%", "9/10"],
+        "incorrect explanation": "Alice goes to the bar every day with a probability of 9/10, and she is not in the first two bars, so if she goes to the bar today, she must be in the third bar."
+    },
+    {
+        "question": "One peach costs one cent. You can use 3 peach pits to exchange for one peach. If you have 10 cents, then what is the maximal number of peaches you can eat?",
+        "answer": ["15"],
+        "explanation": "With 10 cents, you can initially buy 10 peaches. After eating these, you'll have 10 pits. You can exchange 9 of these pits for 3 more peaches. After eating these, you'll have 4 pits left (1 from before and 3 new ones). You can then exchange these for another peach. Now, you can eat 10 + 3 + 1 = 14 peaches. After eating these, you have 2 pits left (1 from before and 1 new pit). Because we are considering the number of peaches that are eaten the most. You can borrow one pit from others, and then exchange all the 3 pits for 1 more peach. After eating the last peach, you return the last pit. So in total, you can eat 10 + 3 + 1 + 1 = 15 peaches.",
+        "incorrect answer": ["14"],
+        "incorrect explanation": "With 10 cents, you can initially buy 10 peaches. After eating these, you'll have 10 pits. You can exchange these for 3 more peaches, and you have 1 pit left. Then, you eat these 3 peaches and have 4 pits. You can exchange these for another peach. So in total, you can eat 10 + 3 + 1 = 14 peaches. This is incorrect because it doesn't account for the fact that you can borrow 1 pit from others and therefore eat more peaches."
+    },
+    {
+        "question": "You finish drinking 20% of a cup of milk. You then fill up water, drink 40% of it and fill up water again. What is the percentage of milk in this cup now?",
+        "answer": ["48%", "0.48"],
+        "explanation": "After drinking 20% of the milk, you have 80% milk left in the cup. When you fill it with water and drink 40% of the mix, you drink 40% of the 80% milk, leaving 60% of the 80% milk, which is 48% of the original volume. When you fill the cup with water again, the percentage of milk remains the same as the volume doubles, but the ratio of milk to total volume stays constant. So, there is 48% milk left in the cup.",
+        "incorrect answer": ["68%", "0.68"],
+        "incorrect explanation": "After drinking 20% of the milk, you have 80% milk left in the cup. When you fill it with water and drink 40% of the mix, you drink 40% of the 80% milk, which is 32% of the volume. When you fill the cup with water again, the percentage of milk is 100% - 32% = 68%."
+    },
+    {
+        "question": "We put 10 g salt into 100 g water. What is the percentage of salt now?",
+        "answer": ["9.09%", "0.0909", "1/11"],
+        "explanation": "The total weight of the mixture (salt + water) is 10 g + 100 g = 110 g. The percentage of salt is the mass of the salt divided by the total mass of the mixture, multiplied by 100. So, (10 g / 110 g) * 100 = 9.09%.",
+        "incorrect answer": ["10%", "0.1", "1/10"],
+        "incorrect explanation": "The salt is 10 g and the water is 100 g, so the salt is 10% of the water. This is incorrect because it mistakenly treats the water as the total mass, rather than the water plus the salt."
+    },
+    {
+        "question": "We have 1 ton of apples which contain 90% water. After a few days, those apples only have 80% water. What is the weight of those apples now?",
+        "answer": ["0.5"],
+        "explanation": "Initially, 10% of the apples is non-water content, which is 0.1 tons. After a few days, this non-water content makes up 20% of the total weight (because the water content has reduced to 80%). If 0.1 tons represents 20% of the total weight, the total weight of the apples now would be 0.1 tons / 20% = 0.5 tons.",
+        "incorrect answer": ["0.9"],
+        "incorrect explanation": "If the apples initially weighed 1 ton and 90% of that weight was water, then after the water content reduced to 80%, the weight of the apples would have reduced to 0.9 tons. This is incorrect because it mistakenly treats the weight reduction as linear, rather than considering the percentage of non-water content."
+    },
+    {
+        "question": "At most how many distinct natural numbers sum to 100?",
+        "answer": ["14"],
+        "explanation": "0 + 1 + 2 + ... + 14 = 105 > 100. So, you can sum 14 distinct natural numbers at most. For example, 0 + 1 + 2 + ... + 11 + 12 + 22 = 100",
+        "incorrect answer": ["13"],
+        "incorrect explanation": "1 + 2 + ... + 14 = 105 > 100. So, you can sum 13 distinct natural numbers at most. This solution didn't take into account that 0 is also a natural number."
+    },
+    {
+        "question": "20 people get full marks for math. 20 people get full marks for history. 20 people get full marks for physics. 7 people get full marks for both math and physics. 9 for both history and physics. 3 do not get full marks for any of the subjects. How many people are there at most?",
+        "answer": ["47"],
+        "explanation": "We have 20 math, 20 history, and 20 physics high-scorers, but some of these are counted multiple times because they scored high in more than one subject. Specifically, 7 people scored high in both math and physics, and 9 scored high in both history and physics. The people who scored high in both math and physics are counted twice in our total, as are the people who scored high in both history and physics. So, we subtract these from our total to avoid double-counting, giving us 20 + 20 + 20 - 7 - 9 = 44. Finally, we add the 3 people who did not score high in any subject, giving us a total of 47 people.",
+        "incorrect answer": ["63"],
+        "incorrect explanation": "You might think that you just add up all the people who scored high in each subject and those who did not score high in any subject, giving 20 (math) + 20 (history) + 20 (physics) + 3 (none) = 63. This is incorrect because it fails to account for the fact that some people scored high in more than one subject, and so are counted multiple times in this total."
+    },
+    {
+        "question": "If five machines produce 5 items in 5 minutes, then how long do 100 machines need to produce 100 items?",
+        "answer": ["5"],
+        "explanation": "If five machines produce 5 items in 5 minutes, it means each machine takes 5 minutes to produce one item. Therefore, 100 machines would still take 5 minutes to produce 100 items, as each machine is still producing one item in the same amount of time.",
+        "incorrect answer": ["100"],
+        "incorrect explanation": "Five machines produce 5 items in 5 minutes. 100 machines produce 100 items in 100 minutes."
+    },
+    {
+        "question": "85% of the taxis in this city are green, the others are blue. A witness sees a blue taxi. She is usually correct with a probability of 80%. What is the probability that the taxi seen by the witness is blue?",
+        "answer": ["41%", "0.41"],
+        "explanation": "Out of all the taxis in the city, 85% are green and the remaining 15% are blue. The witness sees a blue taxi. There are two possibilities: either she saw a blue taxi and identified it correctly, or she saw a green taxi and misidentified it as blue.  The probability of seeing a blue taxi and identifying it correctly is (15% * 80%) = 12%. The probability of seeing a green taxi and misidentifying it as blue is (85% * 20%) = 17%. Therefore, the probability that the taxi seen by the witness is blue is (12% / (12% + 17%)) = 41%.",
+        "incorrect answer": ["80%", "0.8"],
+        "incorrect explanation": "The probability that the witness identified a blue taxi correctly is 80%."
+    },
+    {
+        "question": "Suppose we find a murderer's fingerprint at a crime scene. After comparing this fingerprint with 20000 people, the police found a suspect whose fingerprint matches the one at the scene. Now, this suspect is brought to court and accused of being the murderer. The expert in court tells you that the chance of modern fingerprint comparison technology mistaking two people's fingerprints as the same is 0.01%. Assuming that all 20000 people compared by the police are innocent, what is the percentage that at least one match will be produced after the murderer's fingerprint is compared with them one by one?",
+        "answer": ["86.5%", "0.865"],
+        "explanation": "The key here is that the police conducted 20000 independent fingerprint comparisons. Each comparison has a 0.01% chance of a misidentification. To calculate the probability of at least one misidentification, we first calculate the probability of no misidentification, and then subtract this probability from 1. Assuming each comparison is independent, the probability of no misidentification is the product of 99.99% raised to the power of 20000, i.e., (0.9999)^20000 \u2248 0.135. So, the probability of at least one misidentification is 1 - 0.135 = 0.865, or about 86.5%.",
+        "incorrect answer": ["0.01%", "0.0001"],
+        "incorrect explanation": "One might think that since the misidentification rate is very low (0.01%), we can roughly determine that this suspect is the real murderer. However, this is not the case."
+    },
+    {
+        "question": "How many people need to be in a room to make the probability that at least two people have the same birthday exceed 50%?",
+        "answer": ["23"],
+        "explanation": "To understand this, you need to consider all possible pairs among people in the room, not just consider each new person entering the room pairing with the people already in the room. Therefore, when there are 23 people in a room, there are 253 possible pairs. The chance of these 23 people having different birthdays is: (364 / 365) ^ 253 = 0.4995. This is why it only takes 23 people to make the probability that at least two people have the same birthday exceed 50%.",
+        "incorrect answer": ["183"],
+        "incorrect explanation": "Many people's intuition would tell them that since there are 365 days in a year, it would take close to 365/2, or about 182 or 183 people, to make the probability that at least two people have the same birthday exceed 50%."
+    },
+    {
+        "question": "In a city of 1 million inhabitants, there are 100 known criminals. All inhabitants, including the criminals, are tested with a new crime prediction technology. The technology has a reliability of 95%, meaning that 95% of true criminals are identified as criminals, and 95% of innocent people are identified as innocent. What is the percentage that a person identified as a criminal by the technology is indeed a criminal?",
+        "answer": ["1.9%", "0.019"],
+        "explanation": "Intuitively, one might think that if the technology identifies someone as a criminal, there would be a 95% chance that they are indeed a criminal, given the reliability of the technology. However, this is a misunderstanding of the concept of conditional probability. In this case, the actual probability is much lower. Among 1 million people, 100 are criminals. According to the reliability, the technology will correctly identify 95 criminals (95% of 100) and incorrectly identify 5% of the innocent people as criminals, which is 49950 people (5% of 999900). So, if a person is identified as a criminal, the probability that they are indeed a criminal is 95/(95 + 49950), which equals approximately 0.019, or 1.9%.",
+        "incorrect answer": ["95%", "0.95"],
+        "incorrect explanation": "It might seem intuitive that a person identified as a criminal by a technology with a 95% reliability would indeed be a criminal 95% of the time. However, this fails to take into account the number of false positives (innocent people incorrectly identified as criminals) generated by the technology. Given the vast number of innocent people compared to criminals, even a small percentage of false positives can greatly exceed the number of true positives (actual criminals correctly identified)."
+    },
+    {
+        "question": "You have a tank of water that is initially empty. On the first day, you add one fish to the tank. Every day thereafter, each fish in the tank births one new fish. How many fish will be in the tank at the end of 10 days?",
+        "answer": ["512"],
+        "explanation": "The number of fish doubles each day, starting from the second day. So, there should be 2^(N-1) fish at the end of N days. Here, we set N = 10 and get the answer: 512 days.",
+        "incorrect answer": ["1024"],
+        "incorrect explanation": "At the end of 10 days, there will be 2^10 = 1024 fish in the tank. However, on the first day there was only one fish, and every day thereafter, the number of fish doubles."
+    },
+    {
+        "question": "You have 100 chairs in a row. You start by flipping every chair (1, 2, 3, ..., 100) from its initial position. Then, you flip every second chair (2, 4, 6, ..., 100). Next, you flip every third chair (3, 6, 9, ..., 99). You continue this process until you flip every 100th chair (only chair 100). How many chairs are flipped back to their initial position after all the flips?",
+        "answer": ["90"],
+        "explanation": "A chair will be flipped back to its initial position if it has been flipped an even number of times. A chair will be flipped every time one of its divisors is encountered in the process. For example, chair 6 will be flipped during the 1st, 2nd, 3rd, and 6th steps. Notice that divisors come in pairs, like (1, 6) and (2, 3) for chair 6. So, for most chairs, they will have an even number of divisors and will be flipped back to their initial position. However, square numbers have an odd number of divisors because one of the divisor pairs is a repeated number (e.g., chair 9 has divisors 1, 3, and 9). So, only square number chairs will not be flipped back to their initial position. There are 10 square numbers between 1 and 100 (1, 4, 9, 16, 25, 36, 49, 64, 81, 100), so there will be 100 - 10 = 90 chairs flipped back to their initial position.",
+        "incorrect answer": ["50"],
+        "incorrect explanation": "You might think that half of the chairs will be flipped back to their initial position since you are flipping every other chair in the process. This would give an answer of 100 / 2 = 50 chairs. However, this is incorrect because it does not take into account the number of divisors for each chair and the fact that square numbers have an odd number of divisors."
+    },
+    {
+        "question": "A mouse can produce a litter of 6 mice every month, and each of those mice can start reproducing when they are 2 months old. If you start with a single one-month-old mouse, how many mice will you have after 4 months?",
+        "answer": ["55"],
+        "explanation": "This problem involves exponential growth, but it is not as simple as it might seem. In the first month, you have 1 mouse. In the second month, that mouse produces 6 offspring, so you have 7 mice. In the third month, the original mouse produces another 6 offspring. However, the first 6 offspring cannot produce as they are only one month old. In the third month, we have 13 mice (1 2-month-old + 6 1-month-old + 6 newborns). In the fourth month, the original mouse produces another 6 offspring, the first 6 offspring each produce 6 more mice, resulting in 13 + 6 + 6*6 = 55 mice.",
+        "incorrect answer": ["343"],
+        "incorrect explanation": "One might think that the newborn mouse can produce 6 more mice in the second month, actually it's incorrect because they are only 1-month-old in the second month. Now we show the incorrect calculation process as follows. In the first month, you have 1 mouse. In the second month, that mouse produces 6 offspring, so you have 7 mice. In the third month, the original mouse produces another 6 offspring, the first 6 offspring each produce 6 more mice, resulting in 1 + 6 + 6 + 6*6 = 49 mice. In the fourth month, all the 49 mice each produce 6 more mice, resulting in 49 + 49*6 = 343 mice."
+    },
+    {
+        "question": "In a town, 60% of the women are married to 80% of the men. What percentage of the total adult population is married?",
+        "answer": ["68.57%", "0.6875"],
+        "explanation": "Let's assume there are W women and M men in the town. According to the given information, 0.6W women are married to 0.8M men. Since each married woman is married to one married man, we have 0.6W = 0.8M. Now, let's express M in terms of W: M = (0.6W) / 0.8 = 0.75W. The total adult population is W + M = W + 0.75W = 1.75W. The total number of married people is 0.6W + 0.8M = 0.6W + 0.8(0.75W) = 1.2W. So, the percentage of the total adult population that is married is (1.2W / 1.75W) * 100 = 68.57%.",
+        "incorrect answer": ["70%", "0.7"],
+        "incorrect explanation": "One might think that since 60% of women and 80% of men are married, the average percentage of married people in the town would be the average of these two percentages, i.e., (60% + 80%) / 2 = 70%. However, this is not the correct way to calculate the percentage of the total adult population that is married."
+    },
+    {
+        "question": "You have a pack of 52 playing cards. You draw one card every day, and after drawing, you put the card back into the pack and shuffle it. What is the least number of days you'd need to draw cards in order for you to have a greater than 50% chance of drawing the Ace of Spades at least once?",
+        "answer": ["36"],
+        "explanation": "This is a question about probability. Rather than calculating the probability of drawing the Ace of Spades at least once, it's easier to calculate the probability of never drawing it at all, which is (51/52) to the power of the number of days. To have a greater than 50% chance of drawing the Ace of Spades at least once, we want the probability of never drawing it to be less than 50%, or 0.5. So, we solve this equation for the number of days: (51/52)^x < 0.5. The solution to this equation is approximately 36.",
+        "incorrect answer": ["26"],
+        "incorrect explanation": "One might think that since there are 52 cards in the deck, you would need to draw cards for 26 days (half of 52) to have a greater than 50% chance of drawing the Ace of Spades at least once. However, because the chance of drawing the Ace of Spades each day is independent, you actually need to draw cards for around 36 days for the probability of drawing it at least once to be greater than 50%."
+    },
+    {
+        "question": "A flock of birds is flying in a V formation. There are 25 birds on the left side of the V and 25 birds on the right side. If one bird from the left side moves to the right side, how many more birds will be on the right side than the left side?",
+        "answer": ["2"],
+        "explanation": "When one bird moves from the left side to the right side, the left side loses one bird, and the right side gains one bird. So, the difference between the two sides increases by 2. Therefore, after the bird moves, there will be 2 (26 - 24 = 2) more birds on the right side than on the left side.",
+        "incorrect answer": ["1"],
+        "incorrect explanation": "It might seem intuitive to think that since one bird moved from the left side to the right side, the difference between the two sides would only increase by 1. However, this fails to take into account that the left side also loses a bird, effectively increasing the difference by 2."
+    },
+    {
+        "question": "You borrowed a pen from your friend. This pen can write 500 words on average before running out of ink. After writing a 300-word letter to your friend, you want to know how much longer the pen can write. However, your friend told you that this pen writes twice as fast when the pen is warmer, which happened during the first 150 words. How many more words can you write with this pen?",
+        "answer": ["50"],
+        "explanation": "If the pen writes twice as fast when it is warmer, it means it uses twice as much ink for the same number of words. So, the first 150 words you wrote with the warm pen actually consumed ink equivalent to 300 words. Adding the other 150 words written under normal conditions, you've used ink equivalent to 450 words. Therefore, you can write 500 - 450 = 50 more words.",
+        "incorrect answer": ["200"],
+        "incorrect explanation": "You might think that since you've written 300 words, and the pen can write 500 words on average before running out of ink, you can write 200 more words. However, this doesn't account for the fact that the pen uses twice as much ink when it is warm."
+    },
+    {
+        "question": "Alice and Bob are playing a game with two dice. However, the dice are not fair, and the probability of rolling a 6 is 1/4, while the probability of rolling any other number is 1/8. Alice wins if the two dice show the same number; Bob wins if the numbers are different. What is the probability that Bob will win the game?",
+        "answer": ["84.38%", "0.8438", "27/32"],
+        "explanation": "The probability of rolling a 6 is 1/4. The probability of rolling other 6 numbers is each 1/8. To calculate the probability of Bob winning, we need to first consider the outcomes where the numbers on the two dice are the same (Alice wins). The probability of rolling a 6 on one die is 1/4, and the probability of rolling any other number is 1/8. So, the probability of Alice winning is (1/4 * 1/4) + 6 * (1/8 * 1/8) = 5/32. Therefore, the probability that Bob will win the game is 1 - 5/32 = 27/32 (84.38%).",
+        "incorrect answer": ["85.94%", "0.8594", "55/64"],
+        "incorrect explanation": "The probability of rolling a 6 is 1/4. The probability of rolling a 1, 2, 3, 4, or 5 is each 1/8. So, the probability of Alice winning is (1/4 * 1/4) + 5 * (1/8 * 1/8) = 9/64. Therefore, the probability that Bob will win the game is 1 - 9/64 = 55/64 (85.94%)."
+    },
+    {
+        "question": "A vendor is pulling a cart full of watermelons weighing 100 kilograms. He needs to cross a desert to the other side to sell them. Due to the hot and dry climate of the desert, the water content of the watermelons decreases from 99% to 98%. What is the current weight of the watermelons?",
+        "answer": ["50"],
+        "explanation": "The weight of the watermelons can be calculated as the weight of the water plus the weight of other solid flesh. Let M1 be the weight of the watermelons before, and M2 be the weight of the watermelons after. The weight of flesh before is (1 - 99%) * M1, and after is (1 - 98%) * M2. The weight of all other substances (Mt) remains the same before and after. Therefore, M2 = 0.5 * M1 = 50 kilograms. Hence, the current weight of the watermelons is 50 kilograms.",
+        "incorrect answer": ["99"],
+        "incorrect explanation": "The incorrect answer assumes that the weight of the watermelons is reduced by 1 kilogram due to the 1% decrease in water content. However, this disregards that the invariants in the problem is the weight of other substances in the watermelons, instead of water."
+    },
+    {
+        "question": "Suppose we have a game that assumes we have a fair coin. Two people who are playing can pick two patterns of coin flips. The players then flip a large coin a number of times and record each of the individual flips. Here, H stands for heads and T stands for tails. After the flips, they pay attention to the record of flips and decide which pattern came first in the sequence. If HTH came before HHT, player A won the game, otherwise, B won the game. What is the probability that player B won this game?",
+        "answer": ["0.67", "66.67%", "2/3"],
+        "explanation": "Penney's game",
+        "incorrect answer": ["0.5", "50%", "1/2"],
+        "incorrect explanation": "Ignore the condition of the question as continuous tossing of coins."
+    },
+    {
+        "question": "You're participating in a race. You overtake the second person. What position are you in?",
+        "answer": ["2"],
+        "explanation": "When you overtake the second person, you move into their position, which is second place.",
+        "incorrect answer": ["1"],
+        "incorrect explanation": "This answer assumes that overtaking the second person puts you in first place, but it actually puts you in second place."
+    },
+    {
+        "question": "How many times can you subtract 10 from 100?",
+        "answer": ["1"],
+        "explanation": "After you subtract 10 from 100 once, you're no longer subtracting 10 from 100. You're subtracting 10 from 90, then 80, and so on.",
+        "incorrect answer": ["10"],
+        "incorrect explanation": "This answer assumes that you can subtract 10 from 100 ten times, but after the first subtraction, you're no longer subtracting from 100."
+    },
+    {
+        "question": "If red flower is 1/10 more than yellow flowers, then yellow flower is 1/__ less than red flowers?",
+        "answer": ["11"],
+        "explanation": "Suppose there are 10 yellow flowers. If red flowers are 1/10 more than yellow flowers, then there would be 1/10 * 10 = 1 more red flower than yellow flowers. So, there are 10 + 1 = 11 red flowers. Now, we want to find out how much less the number of yellow flowers is compared to red flowers. There is 1 less yellow flower than red flowers. To express this as a fraction, we can write it as 1/11. So, the yellow flower is 1/11 less than red flowers.",
+        "incorrect answer": ["10"],
+        "incorrect explanation": "One might view the divisor incorrectly and arrive at the wrong answer, such as 1/10."
+    },
+    {
+        "question": "We divide 50 into 4 natural numbers a,b,c,d such that 2a = b/2 and c+2=d-2. How many divisions we can make?",
+        "answer": ["5"],
+        "explanation": "Let's first solve the given equations for a, b, c, and d in terms of one another.\nFrom the first equation, 2a = b/2, we can write b = 4a.\nFrom the second equation, c + 2 = d - 2, we can write d = c + 4.\nNow, we know that a + b + c + d = 50. Substituting the expressions for b and d, we get:\na + 4a + c + (c + 4) = 50\n5a + 2c = 46.\nNow, we need to find the possible values of a and c that satisfy this equation and result in natural numbers for a, b, c, and d.\n(a, b, c, d) = (0, 0, 23, 27) or (2, 8, 18, 22) or (4, 16, 13, 17) or (6, 24, 8, 12) or (8, 32, 3, 7).\nTherefore, We have found 5 possible divisions of 50 into 4 natural numbers a, b, c, and d that satisfy the given conditions.",
+        "incorrect answer": ["4"],
+        "incorrect explanation": "One might ignore that 0 is also a natural number. i.e. (a, b, c, d) = (0, 0, 23, 27)"
+    },
+    {
+        "question": "A train leaves a station and travels north at a speed of 75 mph. Three hours later, a second train leaves the same station and travels in the same direction at 90 mph. How long will it take for the second train to catch up to the first train?",
+        "answer": ["15"],
+        "explanation": "When the second train departs, the first train is 225 miles ahead (75 mph * 3 hours). Each hour, the second train closes the gap by 15 miles (90 mph - 75 mph). Therefore, it will take 225 miles / 15 mph = 15 hours for the second train to catch up to the first train.",
+        "incorrect answer": ["2.5"],
+        "incorrect explanation": "Let's call the time it takes for the second train to catch up to the first train \"t\". \n\nIn the 3 hours that the first train has been traveling, it has covered a distance of: \n\ndistance = speed x time \ndistance = 75 mph x 3 hours \ndistance = 225 miles \n\nSo when the second train starts, it is 225 miles behind the first train. \n\nNow we can set up an equation to solve for \"t\": \n\ndistance traveled by second train = distance between trains \n\n(speed of second train) x t = 225 miles \n\nWe know the speed of the second train is 90 mph, so we can plug that in: \n\n90 mph x t = 225 miles \n\nNow we can solve for \"t\": \n\nt = 225 miles \u00f7 90 mph \n\nt = 2.5 hours \n\nSo it will take the second train 2.5 hours to catch up to the first train."
+    },
+    {
+        "question": "We roll a dice and count the number of times we roll. If we get an even number, we will reset the count to zero. We will stop if we get one. What is the expected number of final counts?",
+        "answer": ["1.5"],
+        "explanation": "Let E be the expected number of final counts. E = 1P(x=1) + 2P(x=2) + 3P(x=3) + .. + nP(x=n) Where, P(x=1) = 1/6 + (1/2)*(1/6) + (5/6)*(1/2)*(1/6) + (5/6)*(5/6)*(1/2)*(1/6) + ... = 2/3 \n Similarly, P(x=2) = (2/3)*(1/3) P(x=3) = (2/3)*(1/3)^2 P(x=n) = (2/3)*(1/3)^(n-1)\n\nE = 1P(x=1) + 2P(x=2) + 3P(x=3) + .. + nP(x=n) = 1.5",
+        "incorrect answer": ["3"],
+        "incorrect explanation": "Let E be the expected number of final counts. When we roll the dice, there are 6 possible outcomes. We can analyze the problem using conditional probability.\nIf we roll a 1 (with probability 1/6), we stop and the final count is 1.\nIf we roll an even number (with probability 1/2), we reset the count to zero and start over. In this case, the expected number of final counts is still E.\nIf we roll an odd number other than 1 (with probability 1/3), we increase the count by 1 and continue rolling. In this case, the expected number of final counts is E + 1.\nNow, we can set up an equation to solve for E:\nE = (1/6) * 1 + (1/2) * E + (1/3) * (E + 1)\nSolving for E:\n(1/6)E = (1/6) * 1 + (1/3) * 1 E = 1 + 2 E = 3\nSo, the expected number of final counts is 3."
+    },
+    {
+        "question": "100 people are boarding a plane in a line and each of them is assigned to one of the 100 seats on a plane. However, the first person in line forgot his boarding pass and as a result decided to sit down in a random seat. The second person will do the following: Sit in her seat if it still available. If her seat is not available, choose a random seat among the seats remaining and sit there. Each following person sits according to the same rules as the second person. What is the probability the 100th person will be able to sit in her assigned seat?",
+        "answer": ["0.5", "50%", "1/2"],
+        "explanation": "The 100th person either gets her own seat, or the first person's (no other seat can be unoccupied when she gets there, since it would have been taken by its owner). The other one of those two seats has taken by someone else. They must have picked it at random, so it's equally likely to be either of the two. For anyone who has a chance of sitting in either the first or the last seat, both are available and equally likely, since picking either means everyone else (before the 100th) can take their assigned seat.",
+        "incorrect answer": ["0.01", "1%", "1/100"],
+        "incorrect explanation": "Most people think the probability is very small and think there is a tiny chance of the 100th person's seat being left after all the people move around. But the actual probability ends up being 1/2."
+    },
+    {
+        "question": "A group of police officers have breathalyzers displaying false drunkenness in 5% of the cases in which the driver is sober. However, the breathalyzers never fail to detect a truly drunk person. One in a thousand drivers is driving drunk. Suppose the police officers then stop a driver at random, and force the driver to take a breathalyzer test. It indicates that the driver is drunk. We assume you don't know anything else about him or her. How high is the probability he or she really is drunk?",
+        "answer": ["1.96%", "0.0196"],
+        "explanation": "1/50.95\n0.019627=1.96%",
+        "incorrect answer": ["0.95", "95%"],
+        "incorrect explanation": "It might seem intuitive that a person identified as drunk by a breathalyzers with a 95% reliability would indeed be drunk 95% of the time. However, this fails to take into account the number of false positives (sober people incorrectly identified as drunk) generated by the breathalyzers."
+    },
+    {
+        "question": "A family has two children. They can be brothers/sisters/big brother and little sister/big sister and little brother with equal probability. If you see one of them is a boy, then what is the probability that the other one is a boy?",
+        "answer": ["0.33", "33%", "1/3"],
+        "explanation": "Let's use the following notation for the children: B for a boy and G for a girl. There are four possible combinations of two children: BB, BG, GB, and GG. Since we know that one of them is a boy, we can eliminate the GG combination. So, we are left with three possibilities: BB, BG, and GB.\nNow, we want to find the probability that the other child is a boy, given that one of them is a boy. This corresponds to the BB combination. Out of the three remaining possibilities, one of them is BB. Therefore, the probability that the other child is a boy is 1/3.",
+        "incorrect answer": ["0.5", "50%", "1/2"],
+        "incorrect explanation": "One might ignore the given information that \"one of them is a boy\", and conclude the answer of 0.5."
+    },
+    {
+        "question": "Ankur's brother has two offsprings and one of the boy was born on Tuesday. What is the probability that Ankur's brother has two boys? Assume an equal chance of giving birth to either sex and an equal chance to giving birth on any day.",
+        "answer": ["13/27", "0.4815", "48.15%"],
+        "explanation": "There can be four cases, i.e. either his brother has two boys, or one boy(elder) and one girl, one girl(elder) and one boy, or both of them are girls. And there are 7 equally likely possibilities for any one of the children of taking birth on Tuesday for all these four cases. Therefore, the total cases are 7*4- 1(as there is repetition of two boys two times). The possibility for having two boys will be 7*2- 1. Therefore, the answer would be 13/27.",
+        "incorrect answer": ["0.33", "33%", "1/3"],
+        "incorrect explanation": "Gender and day of the week are two independent attributes. We only need to consider gender. Let's use the following notation for the children: B for a boy and G for a girl. There are four possible combinations of two children: BB, BG, GB, and GG. Since we know that one of them is a boy, we can eliminate the GG combination. So, we are left with three possibilities: BB, BG, and GB.\nNow, we want to find the probability that the other child is a boy, given that one of them is a boy. This corresponds to the BB combination. Out of the three remaining possibilities, one of them is BB. Therefore, the probability that the other child is a boy is 1/3."
+    },
+    {
+        "question": "You have 100 candidates, upon which there exists a total order. The candidates have appointments with you, one at a time, in a random order. From each interview, you can tell exactly how that candidate ranks amongst those you have already examined. At that point, you may either accept or reject the candidate. Any acceptance or rejection is permanent; no candidate, once rejected, may be reconsidered. Your objective is solely to accept the best candidate. What is the strategy for maximizing your probability of doing so, and what is that probability?",
+        "answer": ["1/e", "0.3679", "36.79%"],
+        "explanation": "Secretary problem",
+        "incorrect answer": ["0.01", "1%", "1/100"],
+        "incorrect explanation": "Randomly accepting a candidate: If you were to randomly accept a candidate at any point during the interviews, your probability of success would be 1/100, or 1%, which is much lower than the optimal strategy."
+    },
+    {
+        "question": "In a 600 meters circular runway, Alice and Bob run from the same location clockwise. They meet with each other every 12 minitues. If they do not change the speed and run from the same location again while this time Alice runs counterclockwise, then they meet with each other every 4 minites. How long does Alice need to run one circle?",
+        "answer": ["6 or 12"],
+        "explanation": "Let Alice's speed be A meters per minute and Bob's speed be B meters per minute. When they run in the same direction (clockwise), their relative speed is |A - B| meters per minute. When they run in opposite directions (Alice counterclockwise), their relative speed is A + B meters per minute.\nWhen they run in the same direction, they meet every 12 minutes, so the distance they cover together in 12 minutes is 600 meters (one full circle). Therefore, we have:\n12|A - B| = 600 (1)\nWhen they run in opposite directions, they meet every 4 minutes, so the distance they cover together in 4 minutes is 600 meters (one full circle). Therefore, we have:\n4(A + B) = 600 (2)Now we have two cases to consider:\nCase 1: A > B In this case, we can rewrite equation (1) as: 12(A - B) = 600\nNow, we can find A = 100. In this case, Alice's speed is 100 meters per minute, and she would need 6 minutes to run one circle (600 meters / 100 meters per minute).\n\nCase 2: A < B In this case, we can rewrite equation (1) as: 12(B - A) = 600\nWe can solve for A = 50. In this case, Alice's speed is 50 meters per minute, and she would need 12 minutes to run one circle (600 meters / 50 meters per minute).\nIn conclusion, both 6 minutes and 12 minutes are correct answers, depending on whether Alice is faster or slower than Bob.",
+        "incorrect answer": ["6"],
+        "incorrect explanation": "Let Alice's speed be A meters per minute and Bob's speed be B meters per minute. When they run in the same direction (clockwise), their relative speed is A - B meters per minute. When they run in opposite directions (Alice counterclockwise), their relative speed is A + B meters per minute.\nWhen they run in the same direction, they meet every 12 minutes, so the distance they cover together in 12 minutes is 600 meters (one full circle). Therefore, we have:\n12(A - B) = 600 (1)\nWhen they run in opposite directions, they meet every 4 minutes, so the distance they cover together in 4 minutes is 600 meters (one full circle). Therefore, we have:\n4(A + B) = 600 (2)\nNow we can solve these two equations simultaneously. Finally, we get A = 100 and B = 50. Now we need to find how long Alice needs to run one circle. Since the circle is 600 meters and Alice's speed is 100 meters per minute, the time she needs is: Time = Distance / Speed Time = 600 / 100 = 6 minutes."
+    },
+    {
+        "question": "There are two circles. Circles A and B are externally tangent to each other, and there is no relative sliding at the point where the two circles touch. The radius of Circle A is 1/3 the radius of Circle B. Circle A rolls around Circle B one trip back to its starting point. How many times will Circle A revolve in total?",
+        "answer": ["4"],
+        "explanation": "Let the radius of Circle A be r and the radius of Circle B be 3r. When Circle A rolls around Circle B, it traces a circular path with a radius equal to the sum of the radii of both circles, which is r + 3r = 4r.\nThe distance Circle A travels along this path is equal to the circumference of the circular path, which is 2 * pi * 4r = 8 * pi * r.\nThe number of times Circle A revolves is equal to the distance it travels divided by its own circumference. The circumference of Circle A is 2 * pi * r.\nSo, the number of times Circle A revolves is (8 * pi * r) / (2 * pi * r) = 8 / 2 = 4 times.",
+        "incorrect answer": ["3"],
+        "incorrect explanation": "Let the radius of Circle A be r and the radius of Circle B be 3r. When Circle A rolls around Circle B, the distance it travels along the circumference of Circle B is equal to the circumference of Circle B, which is 2 * pi * 3r = 6 * pi * r.\nThe number of times Circle A revolves is equal to the distance it travels divided by its own circumference. The circumference of Circle A is 2 * pi * r.\nSo, the number of times Circle A revolves is (6 * pi * r) / (2 * pi * r) = 6 / 2 = 3 times."
+    },
+    {
+        "question": "Alok has three daughters. His friend Shyam wants to know the ages of his daughters. Alok gives him first hint. \n1) The product of their ages is 72. \nShyam says this is not enough information Alok gives him a second hint. \n2) The sum of their ages is equal to my house number. \nShyam goes out and looks at the house number and tells \u201cI still do not have enough information to determine the ages\u201d. \nAlok admits that Shyam can not guess and gives him the third hint \n3) The oldest girl likes strawberry ice cream. \nShyam is able to guess after the third hint. Can you guess what is the age of the oldest girl?",
+        "answer": ["8"],
+        "explanation": "Below are all possibilities to get 72 from product of three different ages: \n1 * 1 * 72 = 72 \n1 * 2 * 36 = 72 \n1 * 3 * 24 = 72 \n1 * 4 * 18 = 72 \n1 * 6 * 12 = 72 \n1 * 8 * 9 = 72 \n2 * 2 * 18 = 72 \n2 * 3 * 12 = 72 \n2 * 4 * 9 = 72 \n2 * 6 * 6 = 72 \n3 * 3 * 8 = 72 \n3 * 4 * 6 = 72 \n\n2) Sum of the ages is given \n1 + 1 + 72 = 74 \n1 + 2 + 36 = 39 \n1 + 3 + 24 = 28 \n1 + 4 + 18 = 23 \n1 + 6 + 12 = 19 \n1 + 8 + 9 = 18 \n2 + 2 + 18 = 22 \n2 + 3 + 12 = 17 \n2 + 4 + 9 = 15 \n2 + 6 + 6 = 14 \n3 + 3 + 8 = 14 \n3 + 4 + 6 = 13 \n\nAll sums are unique except 14. So the age sum must have been 14, otherwise, Shyam would have guessed the ages from hint 2 only. \n\nSo we have two possible combinations to get a sum of 14 \n2 + 6 + 6 = 14 \n3 + 3 + 8 = 14 \n\n3) Alok has the oldest girl (not two!!). So the ages must be 3, 3 and 8.",
+        "incorrect answer": ["36"],
+        "incorrect explanation": "1 * 2 * 36 = 72 \nSomeone might misunderstand the question and think that the oldest sister is 36 years old."
+    },
+    {
+        "question": "Two trains are on same track and they are coming toward each other. The speed of the first train is 50 km/h and the speed of the second train is 70 km/h. A bee starts flying between the trains when the distance between two trains is 100 km. The bee first flies from first train to second train. Once it reaches the second train, it immediately flies back to the first train \u2026 and so on until trains collide. Calculate the total distance travelled by the bee. Speed of bee is 80 km/h.",
+        "answer": ["66.67", "200/3"],
+        "explanation": "Let the first train A move at u km/h.\nLet the second train B move at v km/h.\nLet the distance between two trains be d km\nLet the speed of bee be b km/h\n\nTherefore, the time taken by trains to collide = d/(u+v)\nNow putting all the known values into the above equation, we get, \nu = 50 km/hr\nv = 70 km/hr\nd = 100 km\nb = 80 km/hr\n\nTherefore, the total distance travelled by bee \n= b*d/(u+v) \n= 80 * 100/(50+70) \n= 66.67 km (approx)",
+        "incorrect answer": ["50"],
+        "incorrect explanation": "Let's first calculate the time it takes for the trains to collide:\n\nDistance = Speed x Time\n\nTotal speed of the two trains = 50 km/h + 70 km/h = 120 km/h\n\nTime = Distance / Speed = 100 km / 120 km/h = 5/6 hours\n\nNow, let's calculate the distance travelled by the bee:\n\nThe bee flies at a speed of 80 km/h, so in 1 hour it can cover a distance of 80 km.\n\nIn 5/6 hours (the time it takes for the trains to collide), the bee can cover a distance of:\n\nDistance = Speed x Time = 80 km/h x 5/6 hours = 400/6 km = 66.67 km (rounded to two decimal places)\n\nHowever, we need to remember that the bee flies from one train to the other and then back again, so it covers this distance twice.\n\nTherefore, the total distance travelled by the bee is:\n\n2 x 66.67 km = 133.33 km (rounded to two decimal places)"
+    },
+    {
+        "question": "There are two empty bowls in a room. You have 50 white balls and 50 black balls. After you place the balls in the bowls, a random ball will be picked from a random bowl. Distribute the balls (all of them) into the bowls to maximize the chance of picking a white ball.",
+        "answer": ["0.75", "75%", "3/4"],
+        "explanation": "First, let us assume that we divided the balls into jars equally so each jar will contain 50 balls. \nSo the probability of selecting a white ball will be = probability of selecting the first jar*probability of white ball in the first jar + probability of selecting the second jar*probability of white ball in the second jar \n=(1/2)*(25/50)+(1/2)*(25/50)=0.5\nSince we have to maximize the probability so we will increase the probability of white ball in the first jar and keep the second probability same mean equal to 1 \nso we add 49 white balls with 50 black balls in the first jar and only one white ball in the second jar \nso the probability will be now= (1/2)*(49/99)+(1/2)*(1/1)=0.747\nTherefore, probability of getting white ball becomes 1/2*1 + 1/2*49/99 which is approximately 3/4.",
+        "incorrect answer": ["0.5", "50%", "1/2"],
+        "incorrect explanation": "All balls are picked randomly, so the probability of getting a black ball and a white ball is the same, which is 1/2."
+    },
+    {
+        "question": "There are 1000 wine bottles. One of the bottles contains poisoned wine. A rat dies after one hour of drinking the poisoned wine. How many minimum rats are needed to figure out which bottle contains poison in hour.",
+        "answer": ["10"],
+        "explanation": "We need to figure out in hour. We need 10 rats to figure out the poisoned bottle. The result is based on binary number system. We get 10 using \u2308 Log(2)1000 \u2309. \n\nThe idea is to number bottles from 1 to 1000 and write their corresponding binary numbers on the bottle. Each rat is assigned a position in the binary numbers written on bottles. Let us take an example. Rat 1 represents first bit in every bottle, rat 2 represents second bit and so on. If rat numbers 2, 4 and 6 die, then bottle number 42 (Binary 0000101010) is poisoned.",
+        "incorrect answer": ["1000"],
+        "incorrect explanation": "1000 mice, each rat drinks a bottle of wine, we will know which bottle of wine is poisonous if the corresponding rat dies."
+    },
+    {
+        "question": "In a country, all families want a boy. They keep having babies till a boy is born. What is the expected ratio of boys and girls in the country?",
+        "answer": ["1:1", "50:50"],
+        "explanation": "Assumptions: Probability of having a boy or girl is same. Also, the probability of next kid being a boy doesn\u2019t depend on history.\n\nThe problem can be solved by counting expected number of girls before a baby boy is born.\nLet NG be the expected no. of girls before a boy is born\n\nLet p be the probability that a child is girl and (1-p)\nbe probability that a child is boy.\nNG can be written as sum of following infinite series.\nNG = 0*(1-p) + 1*p*(1-p) + 2*p*p*(1-p) + 3*p*p*p*(1-p) + 4*p*p*p*p*(1-p) +.....\n\nPutting p = 1/2 and (1-p) = 1/2 in above formula.\nNG    = 0*(1/2) + 1*(1/2)2 + 2*(1/2)3 + 3*(1/2)4  +  4*(1/2)5 + ...\n1/2*NG = 0*(1/2)2 + 1*(1/2)3 + 2*(1/2)4 + 3*(1/2)5  +  4*(1/2)6 + ...\nNG - NG/2 =  1*(1/2)2 + 1*(1/2)3 + 1*(1/2)4 + 1*(1/2)5  +  1*(1/2)6 + ...\n\nUsing sum formula of infinite geometrical progression with\nratio less than 1\nNG/2 = (1/4)/(1-1/2) = 1/2\nNG = 1\nSo Expected Number of number of girls = 1\n\nSince the expected number of girls is 1 and there is always a baby boy, the expected ratio of boys and girls is 1:1.",
+        "incorrect answer": ["2:1"],
+        "incorrect explanation": "Since they keep having babies till they have a boy, the ratio of boys to girls is one boy more than girls."
+    },
+    {
+        "question": "A car has 4 tyres and 1 spare tyre. Each tyre can travel a maximum distance of 20000 miles before wearing off. What is the maximum distance the car can travel before you are forced to buy a new tyre? You are allowed to change tyres (using the spare tyre) an unlimited number of times.",
+        "answer": ["25000"],
+        "explanation": "Divide the lifetime of the spare tyre into 4 equal part i.e., 5000 and swap it at each completion of 5000 miles distance. \nLet four tyres be named as A, B, C and D and spare tyre be S.\n\n5000 KMs: Replace A with S. Remaining distances (A, B, C, D, S) : 15000, 15000, 15000, 15000, 20000. \n10000 KMs: Put A back to its original position and replace B with S. Remaining distances (A, B, C, D, S) : 15000, 10000, 10000, 10000, 15000. \n15000 KMs: Put B back to its original position and replace C with S. Remaining distances (A, B, C, D,  ) : 10000, 10000, 5000, 5000, 10000. \n20000 KMs: Put C back to its original position and replace D with S. Remaining distances (A, B, C, D, S) : 5000, 5000, 5000, 0, 5000. \n25000 KMs: Every tyre is now worn out completely. \n\nAll tyres are used to their full strength.",
+        "incorrect answer": ["100000"],
+        "incorrect explanation": "The car has a total of 5 tyres. Therefore, the maximum distance the car can travel before you are forced to buy a new tyre is:\n\n5 x 20000 = 100000 miles"
+    },
+    {
+        "question": "You have 15 Rs with you. You go to a shop and shopkeeper tells you price as 1 Rs per chocolate. He also tells you that you can get a chocolate in return of 3 wrappers. How many maximum chocolates you can eat?",
+        "answer": ["22"],
+        "explanation": "Buy and eat 15 chocolates\nReturn 15 wrappers and get 5 more chocolates.\nReturn 3 wrappers, get 1 chocolate and eat it (keep 2 wrappers)\nNow we have 3 wrappers. Return 3 and get 1 more chocolate.\n\nSo total chocolates = 15 + 5 + 1 + 1",
+        "incorrect answer": ["20"],
+        "incorrect explanation": "You can buy 15 chocolates with the 15 Rs you have. \nNow, for every 3 chocolates you eat, you will have 1 wrapper. \nSo, out of the 15 chocolates, you will have 5 wrappers. \nYou can exchange these 5 wrappers for 1 more chocolate. \nTherefore, the maximum number of chocolates you can eat is 15 + 5 = 20."
+    },
+    {
+        "question": "A Lady (L) bought an item of Rs 100 from the Shopkeeper (C). She paid him through a 500 Rs Note. Realizing that he did not have change, the shopkeeper C got change for that note from another shopkeeper (S) and paid Rs 400 to the Lady.\nAfter a few days, S realized that the note is fake, And this railed at C and took 500 Rs back from him.\nSo in this whole process how much money did C lose in the end?",
+        "answer": ["500"],
+        "explanation": "The total loss for shopkeeper = 500 ( given back to the person who had provided the change )\n\nConsider a transaction box, the lady came with a counterfeit 500 Rs note which can be considered of 0 value.\nNow the lady took the item (cost of the item 100 Rs ) and 400 Rs (the change given by shopkeeper(C) to the lady)\nfrom the transaction box, total of 500 Rs. Now the equivalent amount should be lost by someone, thus shopkeeper(C) lost 500 Rs. Another shopkeeper(S) gave 500 Rs and took back the same amount hence no loss for him.",
+        "incorrect answer": ["1000"],
+        "incorrect explanation": "Initially, C gave the Lady Rs 400 and an item of Rs 100, so C lost a total of Rs 500. Later, when S found out that the note was fake, he took back the Rs 500 he had given to C. This means that C had to return the Rs 500 to S. Therefore, C was left with a loss of Rs 1000 (Rs 500 + Rs 500) as he had to return the entire amount to S but had already given a part of it to the Lady. In addition, he also lost the item that he sold to the Lady. \n\nHence, C lost a total of Rs 1000 in the end."
+    },
+    {
+        "question": "A man is allocated a task. He doubles the task done everyday. If the man completely does the task in 20 days, how many days did it take for the man to complete 25% of the task?",
+        "answer": ["18"],
+        "explanation": "100% of task = 20 days \nAs he doubles the task everyday. So, 50% of task = 19 days \n25% of task = 18 days. ",
+        "incorrect answer": ["5"],
+        "incorrect explanation": "If the man completely does the task in 20 days, the number of days he took to complete 25% of the task are, 20 * 0.25 = 5 days."
+    },
+    {
+        "question": "Four people need to cross a rickety bridge at night. Unfortunately, they have one torch and the bridge is too dangerous to cross without a torch. The bridge can support only two people at a time. All the people don\u2019t take the same time to cross the bridge. Time for each person: 1 min, 2 mins, 7 mins, and 10 mins. What is the shortest time needed for all four of them to cross the bridge?",
+        "answer": ["17"],
+        "explanation": "To reduce the amount of time, we should find a way for 10 and 7 to go together as they are the slowest among all these. If they cross together, then we need one of them to come back to get the others. That would not be ideal. How do we get around that? Maybe we can have 1 waiting on the other side to bring the torch back. This brings us closer to the solution. So let\u2019s put all this together.\n\nSteps:\n1 and 2 cross the bridge and move to the other side.\nNow 2 comes back with the torch from the other side.\n7 and 10 crosses the bridge and 2 remain to this side only.\nNow 1 comes back with the torch from the other side.\nAt last, 1 and 2 cross the bridge and we are done.\nTotal time taken = 2 + 2 + 10 + 1 + 2 = 17 mins",
+        "incorrect answer": ["21"],
+        "incorrect explanation": "The initial solution most people will think of is to use the fastest person as an usher to guide everyone across. But it would take longer as 10 + 1 + 7 + 1 + 2 = 21 mins."
+    },
+    {
+        "question": "A man fell in a 50m deep well. He climbs 4 meters up and slips 3 meters down in one day. How many days would it take for him to come out of the well?",
+        "answer": ["47"],
+        "explanation": "On the first day, the man climbs 4 meters up and slips 3 meters down, therefore he only climbs 1 meter up totally.\nOn the second day, again he climbs 1 meter up, so the total distance climbed is 2 meters till the second day. Therefore, the man climbs 1 meter every day.\nNow as per the above pattern, on the 46th day, he must have climbed 46 meters. So on the 47th day, he climbs full (46 + 4) 50 meters and after that, he will not slip as he is already out of the well so the answer is 47 days.",
+        "incorrect answer": ["50"],
+        "incorrect explanation": "Each day, the man is making a net progress of 1 meter (climbing 4 meters up and slipping 3 meters down). \n\nTo come out of the well, he needs to climb a total of 50 meters."
+    },
+    {
+        "question": "In thirty minutes on a deserted road, there is a 95% chance of seeing a vehicle. What are the probabilities of seeing a vehicle in ten minutes?",
+        "answer": ["63.15%", "0.6315"],
+        "explanation": "To make the question more understandable, we can state that the probability of seeing any other vehicle in the next 30 minutes is 95%, or, more precisely and practically, the probability (%) of not seeing any other vehicle is 5%. So, we need to find 3 consecutive times without seeing another vehicle for 10 minutes for it to be 30 minutes before we see another one.\nLet the probability of not seeing a vehicle in 10 minutes be P(not10) = P\nTherefore, the probability of not seeing a vehicle in 30 minutes, \nP(not30) = P(not10)*P(not10)*P(not10)= P*P*P = P^3\nGiven that, there is a 95% chance of seeing a vehicle (i.e., 0.95) in 30 minutes:\nWe can find the probability of seeing any other vehicle in the next 30 minutes is,\n1 \u2013 P(not30) = 0.95\n= 1 \u2013 P^3 = 0.95\n=  P^3 = 1 \u2013 0.95 = 0.05\nP = 3\u221a0.05 = 0.3684\nTherefore, the probability of seeing a vehicle in the next 30 minutes is  P = 0.3684\nTherefore, the probability of seeing a vehicle in 10 minutes, = 1- P = 1 \u2013 0.3684 = 0.6315",
+        "incorrect answer": ["31.67%", "0.3167"],
+        "incorrect explanation": "The probability of not seeing a vehicle within each 10-minute interval is equal. Therefore, the probability of seeing a vehicle in 10 minutes, = 0.95 / 3 = 0.3167"
+    },
+    {
+        "question": "Ram used to arrive at the railway station every day at 6 pm from work. As soon as Ram arrived at the station, his wife Sita too arrives at the station by car to pick him up. Both drive back home. One day Ram arrived at the station one hour early and thought of taking a walk back to home. He started walking when after covering a specific distance, he meets with Sita. Both drive back home and this time they reached 30 minutes earlier than the usual time. How long has Ram been walking?\nIt is known that Sita drove every day at a uniform speed.",
+        "answer": ["45"],
+        "explanation": "Since they reached home 30 minutes earlier, Sita must have saved 15 minutes in each trip i.e., up and down trip, as the speed of the car was uniform.\nThis means that had Sita drove for 15 more minutes, she would have met Ram at the station.\nAs we know Ram arrived at the station at 5 that day, and they must meet at 6, it means that Sita meets Ram at 5:45.\nTherefore, Ram must have walked 45 minutes before meeting Sita.",
+        "incorrect answer": ["30"],
+        "incorrect explanation": "Since they reached home 30 minutes earlier, Sita must have saved 30 minutes, as the speed of the car was uniform.\nThis means that had Sita drove for 30 more minutes, she would have met Ram at the station.\nAs we know Ram arrived at the station at 5 that day, and they must meet at 6, it means that Sita meets Ram at 5:30.\nTherefore, Ram must have walked 30 minutes before meeting Sita."
+    },
+    {
+        "question": "On an Island, there is an airport that has an unlimited number of identical air-planes. Each air-plane has a fuel capacity to allow it to fly exactly 1/2 way around the world, along a great circle. The planes have the ability to refuel in flight without loss of speed or spillage of fuel. Though the fuel is unlimited, the island is the only source of fuel. You can ignore the time and fuel consumption of refuelling.\nWhat is the minimum number of air-planes required to get one air plane all the way around the world assuming that all of the air planes must return safely to the airport?",
+        "answer": ["3"],
+        "explanation": "The minimum is three.\nStart three planes from the airport (yours and two others). After going 1/8 around, one plane refuels both yours and the other plane with 1/4 of a tank each, leaving it with 1/4 of a tank which is precisely enough to take it home.\nTwo planes continue with a full tank again.\nReaching 1/4 around the other plane transfers 1/4 tank of fuel to yours, leaving it with 1/2 tank, to take it precisely home again.\nYour plane is now full at 1/4 and can go to 3/4 with that fuel.\nThe first returning plane refuels and start off the other way meeting your plane at its 3/4 position, where your plane is empty and the meeting one is half empty. Sharing their fuel they have both 1/4 tank left which can take them to the 7/8 position.\nThe remaining plane has arrived there in the meanwhile with 3/4 tank giving 1/4 to the other now empty planes.\nAll three planes have now 1/4 and can return home.",
+        "incorrect answer": ["4"],
+        "incorrect explanation": "The minimum number of airplanes required to get one airplane all the way around the world and have all airplanes return safely to the airport is 4.\n\nHere's a breakdown of the process:\nStart three planes from the airport (yours and two others). After going 1/8 around, one plane refuels both yours and the other plane with 1/4 of a tank each, leaving it with 1/4 of a tank which is precisely enough to take it home.\nTwo planes continue with a full tank again.\nReaching 1/4 around the other plane transfers 1/4 tank of fuel to yours, leaving it with 1/2 tank, to take it precisely home again.\nYour plane is now full at 1/4 and can go to 3/4 with that fuel.\n\nThree airplanes (A, B, and C) take off from the island, each with a full tank of fuel, and fly eastward.\nAfter going 1/8 around, A plane refuels both B and C plane with 1/4 of a tank each, leaving it with 1/4 of a tank which is precisely enough to take it home.\nB and C will meet your plane at the 3/4 point, and now they each have 3/4 tank of fuel left.\nB and C each give you 1/4 tank of fuel, and now all three planes have 1/2 tank of fuel each, which is just enough to fly the last 1/4 of the journey and safely return to the island together."
+    }
+]
