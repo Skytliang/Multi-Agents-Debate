@@ -23,7 +23,9 @@ import random
 # random.seed(0)
 import argparse
 from langcodes import Language
+from dotenv import load_dotenv
 from utils.agent import Agent
+from utils.openai_utils import parse_json
 from datetime import datetime
 from tqdm import tqdm
 
@@ -35,7 +37,7 @@ NAME_LIST=[
 ]
 
 class DebatePlayer(Agent):
-    def __init__(self, model_name: str, name: str, temperature:float, openai_api_key: str, sleep_time: float) -> None:
+    def __init__(self, model_name: str, name: str, temperature:float, openai_api_key: str, sleep_time: float, base_url: str = None) -> None:
         """Create a player in the debate
 
         Args:
@@ -44,8 +46,9 @@ class DebatePlayer(Agent):
             temperature (float): higher values make the output more random, while lower values make it more focused and deterministic
             openai_api_key (str): As the parameter name suggests
             sleep_time (float): sleep because of rate limits
+            base_url (str): optional custom OpenAI-compatible endpoint
         """
-        super(DebatePlayer, self).__init__(model_name, name, temperature, sleep_time)
+        super(DebatePlayer, self).__init__(model_name, name, temperature, sleep_time, base_url=base_url)
         self.openai_api_key = openai_api_key
 
 
@@ -58,7 +61,8 @@ class Debate:
             openai_api_key: str=None,
             prompts_path: str=None,
             max_round: int=3,
-            sleep_time: float=0
+            sleep_time: float=0,
+            base_url: str=None
         ) -> None:
         """Create a debate
 
@@ -80,6 +84,7 @@ class Debate:
         self.openai_api_key = openai_api_key
         self.max_round = max_round
         self.sleep_time = sleep_time
+        self.base_url = base_url
 
         # init save file
         now = datetime.now()
@@ -123,7 +128,7 @@ class Debate:
 
     def create_base(self):
         print(f"\n===== Translation Task =====\n{self.save_file['base_prompt']}\n")
-        agent = DebatePlayer(model_name=self.model_name, name='Baseline', temperature=self.temperature, openai_api_key=self.openai_api_key, sleep_time=self.sleep_time)
+        agent = DebatePlayer(model_name=self.model_name, name='Baseline', temperature=self.temperature, openai_api_key=self.openai_api_key, sleep_time=self.sleep_time, base_url=self.base_url)
         agent.add_event(self.save_file['base_prompt'])
         base_translation = agent.ask()
         agent.add_memory(base_translation)
@@ -134,7 +139,7 @@ class Debate:
     def creat_agents(self):
         # creates players
         self.players = [
-            DebatePlayer(model_name=self.model_name, name=name, temperature=self.temperature, openai_api_key=self.openai_api_key, sleep_time=self.sleep_time) for name in NAME_LIST
+            DebatePlayer(model_name=self.model_name, name=name, temperature=self.temperature, openai_api_key=self.openai_api_key, sleep_time=self.sleep_time, base_url=self.base_url) for name in NAME_LIST
         ]
         self.affirmative = self.players[0]
         self.negative = self.players[1]
@@ -159,7 +164,7 @@ class Debate:
         self.moderator.add_event(self.save_file['moderator_prompt'].replace('##aff_ans##', self.aff_ans).replace('##neg_ans##', self.neg_ans).replace('##round##', 'first'))
         self.mod_ans = self.moderator.ask()
         self.moderator.add_memory(self.mod_ans)
-        self.mod_ans = eval(self.mod_ans)
+        self.mod_ans = parse_json(self.mod_ans)
 
     def round_dct(self, num: int):
         dct = {
@@ -227,7 +232,7 @@ class Debate:
                 self.moderator.add_event(self.save_file['moderator_prompt'].replace('##aff_ans##', self.aff_ans).replace('##neg_ans##', self.neg_ans).replace('##round##', self.round_dct(round+2)))
                 self.mod_ans = self.moderator.ask()
                 self.moderator.add_memory(self.mod_ans)
-                self.mod_ans = eval(self.mod_ans)
+                self.mod_ans = parse_json(self.mod_ans)
 
         if self.mod_ans["debate_translation"] != '':
             self.save_file.update(self.mod_ans)
@@ -251,7 +256,7 @@ class Debate:
             ans = judge_player.ask()
             judge_player.add_memory(ans)
             
-            ans = eval(ans)
+            ans = parse_json(ans)
             if ans["debate_translation"] != '':
                 self.save_file['success'] = True
                 # save file
@@ -268,16 +273,23 @@ def parse_args():
     parser.add_argument("-i", "--input-file", type=str, required=True, help="Input file path")
     parser.add_argument("-o", "--output-dir", type=str, required=True, help="Output file dir")
     parser.add_argument("-lp", "--lang-pair", type=str, required=True, help="Language pair")
-    parser.add_argument("-k", "--api-key", type=str, required=True, help="OpenAI api key")
-    parser.add_argument("-m", "--model-name", type=str, default="gpt-3.5-turbo", help="Model name")
+    parser.add_argument("-k", "--api-key", type=str, default=None, help="OpenAI api key (defaults to OPENAI_API_KEY from .env)")
+    parser.add_argument("-m", "--model-name", type=str, default=None, help="Model name (defaults to OPENAI_MODEL from .env, else gpt-4o-mini)")
     parser.add_argument("-t", "--temperature", type=float, default=0, help="Sampling temperature")
+    parser.add_argument("--env-file", type=str, default="/workspace/BLINK/.env", help="Path to .env file with OPENAI_* variables")
 
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
-    openai_api_key = args.api_key
+
+    # Load OpenAI credentials/config from the .env file.
+    load_dotenv(args.env_file)
+    openai_api_key = args.api_key or os.getenv("OPENAI_API_KEY")
+    model_name = args.model_name or os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
+    base_url = os.getenv("OPENAI_BASE_URL") or None
+    assert openai_api_key, "No OpenAI API key found. Pass -k or set OPENAI_API_KEY in the .env file."
 
     current_script_path = os.path.abspath(__file__)
     MAD_path = current_script_path.rsplit("/", 2)[0]
@@ -310,7 +322,7 @@ if __name__ == "__main__":
         with open(prompts_path, 'w') as file:
             json.dump(config, file, ensure_ascii=False, indent=4)
 
-        debate = Debate(save_file_dir=save_file_dir, num_players=3, openai_api_key=openai_api_key, prompts_path=prompts_path, temperature=0, sleep_time=0)
+        debate = Debate(model_name=model_name, save_file_dir=save_file_dir, num_players=3, openai_api_key=openai_api_key, prompts_path=prompts_path, temperature=args.temperature, sleep_time=0, base_url=base_url)
         debate.run()
         debate.save_file_to_json(id)
 

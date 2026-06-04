@@ -21,10 +21,16 @@ import os
 import json
 import random
 # random.seed(0)
+from dotenv import load_dotenv
 from code.utils.agent import Agent
+from code.utils.openai_utils import parse_json
 
 
-openai_api_key = "Your-OpenAI-Api-Key"
+# Load OpenAI credentials/config from the .env file.
+load_dotenv(os.getenv("MAD_ENV_FILE", "/workspace/BLINK/.env"))
+openai_api_key = os.getenv("OPENAI_API_KEY", "Your-OpenAI-Api-Key")
+MODEL_NAME = os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
+BASE_URL = os.getenv("OPENAI_BASE_URL") or None
 
 NAME_LIST=[
     "Affirmative side",
@@ -33,7 +39,7 @@ NAME_LIST=[
 ]
 
 class DebatePlayer(Agent):
-    def __init__(self, model_name: str, name: str, temperature:float, openai_api_key: str, sleep_time: float) -> None:
+    def __init__(self, model_name: str, name: str, temperature:float, openai_api_key: str, sleep_time: float, base_url: str = None) -> None:
         """Create a player in the debate
 
         Args:
@@ -42,20 +48,22 @@ class DebatePlayer(Agent):
             temperature (float): higher values make the output more random, while lower values make it more focused and deterministic
             openai_api_key (str): As the parameter name suggests
             sleep_time (float): sleep because of rate limits
+            base_url (str): optional custom OpenAI-compatible endpoint
         """
-        super(DebatePlayer, self).__init__(model_name, name, temperature, sleep_time)
+        super(DebatePlayer, self).__init__(model_name, name, temperature, sleep_time, base_url=base_url)
         self.openai_api_key = openai_api_key
 
 
 class Debate:
     def __init__(self,
-            model_name: str='gpt-3.5-turbo', 
-            temperature: float=0, 
-            num_players: int=3, 
+            model_name: str='gpt-4o-mini',
+            temperature: float=0,
+            num_players: int=3,
             openai_api_key: str=None,
             config: dict=None,
             max_round: int=3,
-            sleep_time: float=0
+            sleep_time: float=0,
+            base_url: str=None
         ) -> None:
         """Create a debate
 
@@ -75,6 +83,7 @@ class Debate:
         self.config = config
         self.max_round = max_round
         self.sleep_time = sleep_time
+        self.base_url = base_url
 
         self.init_prompt()
 
@@ -94,7 +103,7 @@ class Debate:
     def creat_agents(self):
         # creates players
         self.players = [
-            DebatePlayer(model_name=self.model_name, name=name, temperature=self.temperature, openai_api_key=self.openai_api_key, sleep_time=self.sleep_time) for name in NAME_LIST
+            DebatePlayer(model_name=self.model_name, name=name, temperature=self.temperature, openai_api_key=self.openai_api_key, sleep_time=self.sleep_time, base_url=self.base_url) for name in NAME_LIST
         ]
         self.affirmative = self.players[0]
         self.negative = self.players[1]
@@ -120,7 +129,7 @@ class Debate:
         self.moderator.add_event(self.config['moderator_prompt'].replace('##aff_ans##', self.aff_ans).replace('##neg_ans##', self.neg_ans).replace('##round##', 'first'))
         self.mod_ans = self.moderator.ask()
         self.moderator.add_memory(self.mod_ans)
-        self.mod_ans = eval(self.mod_ans)
+        self.mod_ans = parse_json(self.mod_ans)
 
     def round_dct(self, num: int):
         dct = {
@@ -189,7 +198,7 @@ class Debate:
                 self.moderator.add_event(self.config['moderator_prompt'].replace('##aff_ans##', self.aff_ans).replace('##neg_ans##', self.neg_ans).replace('##round##', self.round_dct(round+2)))
                 self.mod_ans = self.moderator.ask()
                 self.moderator.add_memory(self.mod_ans)
-                self.mod_ans = eval(self.mod_ans)
+                self.mod_ans = parse_json(self.mod_ans)
 
         if self.mod_ans["debate_answer"] != '':
             self.config.update(self.mod_ans)
@@ -213,7 +222,7 @@ class Debate:
             ans = judge_player.ask()
             judge_player.add_memory(ans)
             
-            ans = eval(ans)
+            ans = parse_json(ans)
             if ans["debate_answer"] != '':
                 self.config['success'] = True
                 # save file
@@ -236,6 +245,6 @@ if __name__ == "__main__":
         config = json.load(open(f"{MAD_path}/code/utils/config4all.json", "r"))
         config['debate_topic'] = debate_topic
 
-        debate = Debate(num_players=3, openai_api_key=openai_api_key, config=config, temperature=0, sleep_time=0)
+        debate = Debate(model_name=MODEL_NAME, num_players=3, openai_api_key=openai_api_key, config=config, temperature=0, sleep_time=0, base_url=BASE_URL)
         debate.run()
 
